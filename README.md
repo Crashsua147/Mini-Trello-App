@@ -17,3 +17,13 @@ Note Authentication:
 ## Ảnh màn hình ứng dụng
 
 ![Login](./screenshot/login.png)
+![Login1](./screenshot/login1.png)
+![Login2](./screenshot/login2.png)
+![Boards](./screenshot/boards.png)
+![BoardAdd](./screenshot/board_add.png)
+![Cards](./screenshot/cards.png)
+![CardAdd](./screenshot/task_add.png)
+![CardEdit](./screenshot/card_edit.png)
+![CardDelete](./screenshot/card_delete.png)
+![TaskAdd](./screenshot/task_add.png)
+![TaskEdit](./screenshot/task_edit.png)
