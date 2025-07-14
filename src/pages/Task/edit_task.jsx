@@ -111,7 +111,7 @@ export function EditTask({ task }) {
                 <DescriptionIcon />
               </Box>
             </Tooltip>
-          )}
+          )}  
           <Tooltip title="This card has comment">
             <Box sx={{ ...muiS.dFlex, ...muiS.cursor }}>
               <ChatBubbleOutlineIcon /> 1
