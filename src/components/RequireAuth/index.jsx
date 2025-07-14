@@ -32,7 +32,7 @@ function RequireAuth({ children }) {
     fetchUser();
   }, [navigate, setUserModel]);
 
-  if (loading) return <p>🔄 Đang kiểm tra đăng nhập...</p>;
+  if (loading) return <p>Check Login</p>;
   if (!userModel) return null;
 
   return children;

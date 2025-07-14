@@ -26,7 +26,7 @@ RouterEmail.post("/send-verification", async (req, res) => {
 
     return res.status(200).json({ message: "Verification code sent!" });
   } catch (error) {
-    console.error("💥 Lỗi gửi email:", error); // in lỗi ra console
+    console.error("Error:", error);
     return res.status(500).json({ error: "Lỗi gửi email" });
   }
 });
@@ -77,7 +77,7 @@ RouterEmail.post("/signup", async (req, res) => {
       return res.status(200).json({ id: newUserId, email, token });
     });
   } catch (error) {
-    console.error("🧨 Signup error:", error);
+    console.error("Error:", error);
     return res.status(500).json({ error: "Đăng ký thất bại" });
   }
 });

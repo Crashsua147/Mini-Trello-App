@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import { styled, alpha } from "@mui/material/styles";
 import AppBarMui from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -9,7 +10,6 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
@@ -19,6 +19,8 @@ import TrelloLogo from "~/assets/trello.svg";
 import ModeSelect from "../ModeSelect";
 import { useUserStore } from "../../../stores/userStore";
 import { Avatar } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
+import { muiS } from "~/muiShortcut";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -50,7 +52,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -61,6 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function AppBar() {
+  const navigate = useNavigate();
   const { userModel } = useUserStore();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -90,11 +92,11 @@ function AppBar() {
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
-        vertical: "bottom", // từ dưới icon
+        vertical: "bottom",
         horizontal: "right",
       }}
       transformOrigin={{
-        vertical: "top", // gốc của menu là phía trên
+        vertical: "top",
         horizontal: "right",
       }}
       id={menuId}
@@ -171,14 +173,21 @@ function AppBar() {
   return (
     <Box sx={{ flexGrow: 1, height: (theme) => theme.trello.appBarHeight }}>
       <AppBarMui position="static">
-        <Toolbar sx={{ display: "flex", gap: 1 }}>
-          <img src={TrelloLogo} alt="Trello Logo" />
-          <Typography
-            variant="span"
-            sx={(theme) => ({ fontSize: "1.5rem", fontWeight: "bold" })}
-          >
-            Trello
-          </Typography>
+        <Toolbar sx={{ ...muiS.dFlex, gap: 1 }}>
+          <Tooltip title="Home">
+            <Box
+              sx={{ ...muiS.dFlex, ...muiS.cursor }}
+              onClick={() => navigate("/")}
+            >
+              <img src={TrelloLogo} alt="Trello Logo" />
+              <Typography
+                variant="span"
+                sx={(theme) => ({ fontSize: "1.5rem", fontWeight: "bold" })}
+              >
+                Trello
+              </Typography>
+            </Box>
+          </Tooltip>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

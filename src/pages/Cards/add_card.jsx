@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react"
-import { Container, Box, Avatar } from "@mui/material"
-import Button from "@mui/material/Button"
-import axios from "axios"
-import { useUserStore } from "../../../stores/userStore"
-import Card from "@mui/material/Card"
-import CardContent from "@mui/material/CardContent"
-import CardMedia from "@mui/material/CardMedia"
-import Typography from "@mui/material/Typography"
-import CardActionArea from "@mui/material/CardActionArea"
-import Grid from "@mui/material/Grid"
-import BackgroundBoards from "~/assets/background-boards.jpeg"
-import Dialog from "@mui/material/Dialog"
-import DialogActions from "@mui/material/DialogActions"
-import DialogContent from "@mui/material/DialogContent"
-import DialogContentText from "@mui/material/DialogContentText"
-import DialogTitle from "@mui/material/DialogTitle"
-import TextField from "@mui/material/TextField"
-import { ref, onValue } from "firebase/database"
-import { dbClient } from "../../../firebaseClientConfig"
+import { useState, useEffect } from "react";
+import { Container, Box, Avatar } from "@mui/material";
+import Button from "@mui/material/Button";
+import axios from "axios";
+import { useUserStore } from "../../../stores/userStore";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import CardActionArea from "@mui/material/CardActionArea";
+import Grid from "@mui/material/Grid";
+import BackgroundBoards from "~/assets/background-boards.jpeg";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import TextField from "@mui/material/TextField";
+import { ref, onValue } from "firebase/database";
+import { dbClient } from "../../../firebaseClientConfig";
 import { v4 as uuidv4 } from "uuid";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 
 export function AddCard() {
   const { id } = useParams();

@@ -98,8 +98,6 @@ const SortableItem = ({ card }) => {
 
 export function Cards({ cards }) {
   const { id } = useParams();
-  // const [cards, setCards] = useState(data);
-  console.log(cards);
 
   const sensors = useSensors(
     useSensor(PointerSensor),

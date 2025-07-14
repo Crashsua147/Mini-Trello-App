@@ -20,7 +20,7 @@ import { ref, onValue } from "firebase/database";
 import { dbClient } from "../../../../firebaseClientConfig";
 import { v4 as uuidv4 } from "uuid";
 
-function BoardAdd() {
+export function BoardAdd() {
   const { userModel } = useUserStore();
   const [boards, setBoards] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -160,5 +160,3 @@ function BoardAdd() {
     </Grid>
   );
 }
-
-export default BoardAdd;

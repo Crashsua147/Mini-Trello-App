@@ -6,12 +6,8 @@ import axios from "axios";
 import { useUserStore } from "../../../stores/userStore";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
-import Tooltip from "@mui/material/Tooltip";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import MenuItem from "@mui/material/MenuItem";
 
 export function EditCard({ cardId }) {

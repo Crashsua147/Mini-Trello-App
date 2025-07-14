@@ -8,12 +8,12 @@ export function authenticateJWT(req, res, next) {
 
     jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
       if (err) {
-        return res.sendStatus(403); // token invalid
+        return res.sendStatus(403);
       }
-      req.user = user; // chứa { id, email }
+      req.user = user;
       next();
     });
   } else {
-    res.sendStatus(401); // không có token
+    res.sendStatus(401);
   }
 }

@@ -65,25 +65,11 @@ app.use(session({
   secret: 'trello-secret',
   resave: false,
   saveUninitialized: false,
-  // cookie: {
-  //   httpOnly: true,
-  //   secure: false,
-  //   sameSite: 'lax'
-  // }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-// 🚪 Route bắt đầu đăng nhập GitHub
 app.get('/auth/github', passport.authenticate('github'));
-
-// app.get('/auth/github/callback', async (req, res, next) => {
-//   const githubCode = req.query.code; // 👈 Lấy mã code từ URL
-
-//   passport.authenticate('github', { failureRedirect: '/' })(req, res, next);
-// }, (req, res) => {
-//   res.redirect('http://localhost:5173/boards');
-// });
 
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
@@ -91,15 +77,6 @@ app.get('/auth/github/callback',
     res.redirect('http://localhost:5173/boards');
   }
 );
-
-// API trả về thông tin người dùng hiện tại
-// app.get('/api/user', (req, res) => {
-//   if (req.isAuthenticated()) {
-//     res.json(req.user);
-//   } else {
-//     res.status(401).json({ message: 'Not authenticated' });
-//   }
-// });
 
 app.get('/api/user', async (req, res) => {
   const clientUserId = req.query.userId;

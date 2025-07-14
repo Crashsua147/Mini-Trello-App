@@ -13,7 +13,6 @@ RouteBoard.get("/boards", authenticateJWT, async (req, res) => {
   try {
     const boardsSnap = await get(ref(db, `boards`));
     const boards = boardsSnap.val() || [];
-       console.log(boards);
     res.status(200).json(boards);
   } catch (error) {
     console.error("🧨 Fetch boards error:", error);

@@ -32,7 +32,7 @@ export function AddTask({ cardId }) {
     setOpen(false);
   };
 
-    const tasId = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+  const tasId = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
   const addTask = async () => {
     const payload = {
       id: tasId,
@@ -81,7 +81,7 @@ export function AddTask({ cardId }) {
           }}
         >
           <TextField
-          autoFocus
+            autoFocus
             fullWidth
             id="task-name"
             label="Task Name"
@@ -91,7 +91,7 @@ export function AddTask({ cardId }) {
             helperText={isError ? "Card name is required" : ""}
           />
           <TextField
-          autoFocus
+            autoFocus
             fullWidth
             id="task-desc"
             label="Task Description"

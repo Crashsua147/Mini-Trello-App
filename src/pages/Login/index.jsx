@@ -29,11 +29,8 @@ function Login() {
         email,
         code,
       });
-      // Save the token and redirect (if needed)
-      // localStorage.setItem("token", res.data.token);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userId", res.data.id);
-      console.log("Cookies:", document.cookie);
       navigate("/boards");
     } catch (err) {
       console.error("Login failed:", err);
