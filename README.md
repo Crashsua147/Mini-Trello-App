@@ -16,4 +16,4 @@ Note Authentication:
       + Gmail: user@gmail.com  | Code: 2
 ## Ảnh màn hình ứng dụng
 
-![Login](./screenshots/login.png)
+![Login](./screenshot/login.png)
