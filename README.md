@@ -1,15 +1,16 @@
 # Mini-Trello-App
-Mini Trello App
-=======
-# React + Vite
+Clone code: git clone https://github.com/Crashsua147/Mini-Trello-App.git
+User vs code open project:
+  - Run: npm install express
+  - Open 2 terminal
+  - Terminal 1: node server.js, Terminal 2: yarn dev
+Features:
+  - In HomePage you can Create Board: Enter name (required), description.
+  - In BoardPage you can Create Card, Edit Card, Delete Card, Add Members in your board, Add Task, Check to update status Task 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Note Authentication: 
+  - Login app with gmail: Code will send in your gmail enter code to login.
+  - Login app with github: Open github.com and login.
+  - Demom account with gmail:
+      + Gmail: admin@gmail.com | Code: 1
+      + Gmail: user@gmail.com  | Code: 2
