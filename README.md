@@ -14,3 +14,6 @@ Note Authentication:
   - Demom account with gmail:
       + Gmail: admin@gmail.com | Code: 1
       + Gmail: user@gmail.com  | Code: 2
+## Ảnh màn hình ứng dụng
+
+![Login](./screenshots/login.png)
